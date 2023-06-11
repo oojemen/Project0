@@ -25,9 +25,9 @@ public class ConnectionUtil {
         //Hardcoded for now - It's possible hide them in the Environment Variables, feel free to look into it
 
         //I'm going to put the credentials in Strings, and use those strings in a method that gets connections
-        String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=p0demo";
-        String username = "postgres";
-        String password = "password"; //this is the password you made when you installed Postgres
+        String url = System.getenv("URL");
+        String username = System.getenv("USERNAME");
+        String password = System.getenv("PASSWORD"); //this is the password you made when you installed Postgres
 
         //This return statement is what returns out actual database Connection object
         //Note how this getConnection() method has a return type of Connection

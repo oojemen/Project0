@@ -1,0 +1,24 @@
+01:18:45.475 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+01:18:45.559 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+01:18:45.655 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+01:18:45.666 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@362a019c{/,null,AVAILABLE}
+01:18:45.677 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7b8233cd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+01:18:45.683 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@58359ebd{STARTING}[11.0.15,sto=0] @1114ms
+01:18:45.683 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+01:18:45.692 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+01:18:45.708 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+01:18:45.711 [main] INFO  io.javalin.Javalin -- Javalin started in 236ms \o/
+01:19:35.496 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:21:02.857 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+01:27:29.545 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:27:49.092 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:29:29.334 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:30:07.974 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee

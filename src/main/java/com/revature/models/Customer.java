@@ -3,46 +3,104 @@ package com.revature.models;
 /**
  * @author Osey Ojemen
  * Date: 6/4/2023
- *  PROJECT
+ *  PROJECT0
  *
- *  Purpose: This program will display menu to allow the user load Customer's Data,
- *           add new customer data, display customers information, retrieve customers data,
- *           retrieve customers with total sales based on their range and on selection the
- *           program ends.
+ *  Customer Management System
+ *
+ *  Purpose: This Application will accept HTTP requests and store them in a connected database.
+ *  It utilizes a javalin framework to handle HTTP "CRUD" requests and responses.
+ *
+ *
  *
  */
 
+public class Customer {
 
-//import required java class
-import java.util.Arrays;
-import java.util.Scanner;
+    private int customerId;
+    private String firstName;
 
+    private String lastName;
 
-public class Customer extends User {
+    private int totalSales;
 
-    private double totalSales;
-    //  private char password;
+    private Employee employee;
+
+    private int employeeId_fk;
 
     //constructor which sets the values of variables
-    public  Customer(String name, int id, double totalSales) {
-        super (name, id);
+    public  Customer(int customerId, String firstName,  String lastName,  int totalSales, Employee employee) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.customerId = customerId;
         this.totalSales = totalSales;
+
+
+    }
+    public  Customer(String firstName,  String lastName,  Employee employee) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.employee=employee;
+    }
+    public  Customer(String firstName,  String lastName,  int employeeId_fk) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.employeeId_fk = employeeId_fk;
+
+    }
+    //getters
+    public  int getCustomerId() {
+        return customerId;
     }
 
-    //total sales
-    public double getTotalSales() {
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getTotalSales() {
         return totalSales;
     }
 
     public void setTotalSales() {
         this.totalSales= totalSales;
     }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public int getEmployeeId_fk() {
+        return employeeId_fk;
+    }
+
+    public void setEmployeeId_fk(int employeeId_fk) {
+        this.employeeId_fk = employeeId_fk;
+    }
 
     //displays formatted string of an customer's data
+    @Override
     public String toString(){
 
-        return super.getID() + ": " + super.getName() + ", Total Sales $" + totalSales;
+        return "Customer \n( customer_id="  +customerId  +  ", first_name='" + firstName
+                +", last_name=" + lastName +  ", Total Sales= $" + totalSales +  ", employee=" + employee
+                + ", employee_id_fk=" + employeeId_fk + ")";
+
     }
 
 }
-

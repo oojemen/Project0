@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8548530c-88ab-45ed-b0af-c7e7b02a5df6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project0/Project0/Project0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAOInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAOInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="XML Properties File" />
       </list>
     </option>
   </component>
@@ -45,7 +56,7 @@
     "onboarding.tips.debug.path": "C:/Users/ojez9/IdeaProjects/Project0/src/main/java/com/revature/Main.java"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MyLauncher">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.revature.Main" />
       <module name="Project0" />
@@ -59,6 +70,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="URL" value="jdbc:postgresql://localhost:5432/postgres?currentSchema=Project0" />
+        <env name="USERNAME" value="postgres" />
+        <env name="PASSWORD" value="password" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.revature.MyLauncher" />
+      <module name="Project0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MyLauncher" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyLauncher" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
