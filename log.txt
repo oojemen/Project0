@@ -22,3 +22,5 @@
 01:27:49.092 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
 01:29:29.334 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
 01:30:07.974 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+01:52:30.362 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employees
+01:52:37.201 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
