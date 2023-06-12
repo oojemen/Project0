@@ -1,87 +1,92 @@
 package com.revature.controllers;
 
+/**
+ * @author Osey Ojemen
+ * Date: 6/4/2023
+ *  PROJECT
+ *
+ *  Purpose: This program will display menu to allow the user load Customer's Data,
+ *           add new customer data, display customers information, retrieve customers data,
+ *           retrieve customers with total sales based on their range and on selection the
+ *           program ends.
+ *
+ */
 
-import com.revature.daos.EmployeeDAO;
 import com.revature.models.Employee;
 import com.revature.services.EmployeeService;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+import java.util.ArrayList;
 
 public class EmployeeController {
 
-//***********************************************//
-
  /*
-
- public class EmployeeController {
-
-    The controller layer has the sole responsibility of taking in HttpRequests and has the responsibilty of sending the
-    corresponding response.
-
-    For our responses, best practice will be to return an appropriate message in the response body and have the proper
-    status code
-
-    Just like before we essentially want to map our CRUD methods to handlers
-
     TODO Create handlers for the following:
     Create
     Read (All)
     Read (One)
     Update
     Delete
-
-    We'll be implementing the create and read all methods and adding stubs for the rest of them
      */
 
-    private static final EmployeeService employeeService = new EmployeeService(new EmployeeDAO());
+    private static final EmployeeService employeeService = new EmployeeService();
 
     private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
-
+    //method to handle get request on javelin app
     public static void handleGetAll(Context ctx){
-        // Inside here we need to make a call to our Employee Service to get us all the employees listed
-        ctx.status(405);
+        // Array list to get employee data/new employee object
+        ArrayList<Employee> employee = employeeService.getAllEmployee();
 
+        // Now we can leverage our JSON mapper, GSON, to convert our Java Object to a JSON
+        ctx.status(200);
+        ctx.json(employee);
     }
 
+    //method to handle create on javelin app
     public static void handleCreate(Context ctx){
 
-        ctx.status(405);
+        Employee employee = ctx.bodyAsClass(Employee.class);
 
-       // ctx.result("Hello World from the employee controller");
+        Employee returnedEmployee = employeeService.createNewEmployee(employee);
+
+        if (returnedEmployee != null) {
+            // This means the employee was created
+            ctx.status(201);
+            ctx.json(returnedEmployee);
+            logger.info("The following employee was created: " + returnedEmployee.toString());
+        } else {
+            // 400 HTTP response
+            ctx.status(400);
+            logger.warn("Creation failed");
+        }
     }
-    public static void handleUpdate(Context ctx){
 
+    public static void handleUpdate(Context ctx){
 
         // We need to deserialize that and create a Role object
         Employee submittedEmployee = ctx.bodyAsClass(Employee.class);
+        submittedEmployee.setEmployee_id(Integer.parseInt(ctx.pathParam("id")));
 
         // Call the roleService to actually do something with this info
-        boolean updateSuccessful = employeeService.updateLocation(submittedEmployee.getFirstName(),
-                submittedEmployee.getLastName(), submittedEmployee.getLocation());
+        boolean updateSuccessful = employeeService.updateEmployee(submittedEmployee);
 
-        // So updateSuccessful should let us know if we successfully updated the DB
+        //  if we successfully updated the DB
         if (updateSuccessful){
-            // This is good
+
             ctx.status(200);
-            // Successful update should have some logging
-            logger.info("Employee: " + submittedEmployee.getFirstName()  + submittedEmployee.getLastName()   + " location was updated to " +
-                    submittedEmployee.getLocation());
+
+            logger.info("Employee update successful " );
         } else{
             // Was not able to update DB for some reason
             ctx.status(400);
         }
     }
 
-    public static void handleGetOne(Context ctx){
-        // Recall that the path for this will be http://localhost:7070/roles/{id}
-        // This will match http://localhost:7070/roles/1
-        // But it will also match http://localhost:7070/roles/NaN
+    public  static void handleGetOne(Context ctx){
 
-        //int x = ctx.pathParam("id"); // We need to find a way to parse this
         int id;
         try{
             id = Integer.parseInt(ctx.pathParam("id"));
@@ -113,7 +118,22 @@ public class EmployeeController {
     }
 
     public static void handleDelete(Context ctx){
-        ctx.status(405); // Method is not allowed
+
+        // Extract the customer ID from the request parameters or path
+        int employeeid = Integer.parseInt(ctx.pathParam("id"));
+
+        // Call the CustomerService to delete the customer
+        boolean isDeleted = employeeService.deleteEmployee(employeeid);
+
+        if (isDeleted) {
+            // Customer deleted successfully, return a 204 No Content response
+            ctx.status(204);
+        } else {
+            // Customer not found or deletion failed, return a 404 Not Found response
+            ctx.status(404);
+            ctx.result("Customer not found or deletion failed");
+        }
     }
+
 }
 

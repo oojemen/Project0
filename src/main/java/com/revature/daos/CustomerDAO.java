@@ -1,10 +1,22 @@
 package com.revature.daos;
 
-import java.sql.*;
+/**
+ * @author Osey Ojemen
+ * Date: 6/4/2023
+ *  PROJECT0
+ *
+ *  Customer Management System
+ *
+ *  Purpose: This Application will accept HTTP requests and store them in a connected database.
+ *  It utilizes a javalin framework to handle HTTP "CRUD" requests and responses.
+ *
+ *
+ *
+ */
+
 import java.util.ArrayList;
 
 import com.revature.models.Customer;
-import com.revature.models.Employee;
 import com.revature.utils.ConnectionUtil;
 
 import java.sql.Connection;
@@ -16,7 +28,7 @@ import java.sql.SQLException;
 //This Class will access/query the roles table in the DB.
 public class CustomerDAO implements CustomerDAOInterface{
 
-   // @Override
+    @Override
     public ArrayList<Customer> getAllCustomer() {
 
 
@@ -26,10 +38,10 @@ public class CustomerDAO implements CustomerDAOInterface{
             //A String that represents our SQL statement
             String sql = "SELECT * FROM customer";
 
-            Statement s = conn.createStatement();
+           PreparedStatement s = conn.prepareStatement(sql);
 
             //Now, execute the query, and save the results in a ResultSet
-            ResultSet rs = s.executeQuery(sql);
+            ResultSet rs = s.executeQuery();
 
             ArrayList<Customer> customerList = new ArrayList<>();
 
@@ -40,17 +52,18 @@ public class CustomerDAO implements CustomerDAOInterface{
 
                 //For every Employee record returned from the DB, make a new Employee object
                 Customer customer = new Customer(
-                       // rs.getInt("customerId"),
-                        rs.getString("firstName"),
-                        rs.getString("lastName"),
-                        empDAO.getEmployeeById(rs.getInt("employeeId_fk"))
+                        rs.getInt("customerid"),
+                        rs.getString("firstname"),
+                        rs.getString("lastname"),
+                        rs.getInt("totalsales"),
+                        empDAO.getEmployeeById(rs.getInt("employeeid_fk"))
                         //we needed to retrieve a Employee object this way, because the DB just returns the int PK
                         //"use the getRoleById method to return a role object using the role_id_fk"
                 );
 
                 //for every new Employee, add it to the ArrayList
                 customerList.add(customer);
-
+                System.out.println(customer);
                 //by the time this while loop breaks (when rs.next() == false), our ArrayList will be full
 
             }
@@ -58,45 +71,142 @@ public class CustomerDAO implements CustomerDAOInterface{
             return customerList; //after all that nonsense above, we return our fully populated ArrayList
 
         } catch(SQLException e){
-            System.out.println("Failed to get all employees");
+            System.out.println("Failed to get all customers");
             e.printStackTrace(); //detailed info in our console about what went wrong
         }
 
         return null;
     }
-   // @Override
+    @Override
     public Customer insertCustomer(Customer customer) {
 
-        //REMEMBER - every DAO method must start by opening DB connection
+        //Establish DB connection
         try(Connection conn = ConnectionUtil.getConnection()){
 
-            //we need to create the SQL String that we're sending to the database
-            String sql = "INSERT INTO customer (firstName, lastName, employeeId_fk) VALUES (?, ?, ?)";
+            // create the SQL String that we're sending to the database
+            String sql = "INSERT INTO customer (customerid, firstname, lastname, totalsales, employeeid_fk) VALUES (?, ?, ?, ?, ?)";
 
             //Instantiate a PreparedStatement to hold our SQL String and fill its variables
             PreparedStatement ps = conn.prepareStatement(sql);
 
             //we can now use our PreparedStatement to fill in the wildcards one by one
-            ps.setString(1, customer.getFirstName());
-            ps.setString(2, customer.getLastName());
-            ps.setInt(3, customer.getEmployeeId_fk());
+            ps.setInt(1, customer.getCustomerid());
+            ps.setString(2, customer.getFirstname());
+            ps.setString(3, customer.getLastname());
+            ps.setInt(4, customer.getTotalsales());
+            ps.setInt(5, customer.getEmployeeid_fk());
 
-            //now that our SQL String is fully populated with data, we can execute the update
+            // execute the update
             ps.executeUpdate();
 
-            //No data is returned in an INSERT, so no need to make a ResultSet
-            //But we DO want to return the inputted employee back to the user as confirmation
+            // return the inputted customer back to the user as confirmation
             return customer;
-
-            //if we wanted to, we could have made another DAO method to SELECT the employee we inserted
-            //but this return above is fine (and a lot less work)
 
         } catch(SQLException e){
             System.out.println("Insert employee failed!");
-            e.printStackTrace(); //tell the suer what exactly went wrong
+            e.printStackTrace(); //tell the user what exactly went wrong
         }
 
         return null;
+    }
+
+    @Override
+    public Customer getCustomerById(int id){
+
+        // Establish a database connection
+        try(Connection conn = ConnectionUtil.getConnection()){
+
+        // Prepare a query
+        String sql = "SELECT * FROM customer WHERE customerid = ?";
+
+            // Create a prepared statement
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+
+            // Execute the query
+            ResultSet rs = ps.executeQuery();
+
+            EmployeeDAO empDAO = new EmployeeDAO();
+
+            if (rs.next()) {
+                // Retrieve customer data from the result set
+
+                // Create a Customer object
+                Customer customer = new Customer(
+                        rs.getInt("customerid"),
+                        rs.getString("firstname"),
+                        rs.getString("lastname"),
+                        rs.getInt("totalsales"),
+                        empDAO.getEmployeeById(rs.getInt("employeeid_fk"))
+
+                );
+
+                return customer;
+            }
+            else{
+                System.out.println("Customer ID could not be retrieved!");
+            }
+        } catch (SQLException e) {
+            System.out.println("Retrieve customer by ID failed!");
+            e.printStackTrace();
+        }
+
+        return null; // No customer found with the given ID
+    }
+
+
+    @Override
+    public boolean updateCustomer(Customer customer) {
+        // Establish a database connection
+        try(Connection conn = ConnectionUtil.getConnection()){
+
+
+            // Prepare an update query
+        String sql = "UPDATE customer SET firstname = ?, lastname = ?, totalsales = ? WHERE customerid = ?";
+
+            // Create a prepared statement
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ps.setString(1, customer.getFirstname());
+            ps.setString(2, customer.getLastname());
+            ps.setInt(3, customer.getTotalsales());
+            ps.setInt(4, customer.getCustomerid());
+
+            // Execute the update
+            ps.executeUpdate();
+
+            return true;
+
+        } catch (SQLException e) {
+            System.out.println("Total sales update failed!");
+            e.printStackTrace();
+        }
+
+        return false; // The total sales value update failed
+    }
+
+    public boolean deleteCustomer(int id) {
+        // Establish a database connection
+        try (Connection conn = ConnectionUtil.getConnection()) {
+
+            // Prepare a delete query
+            String sql = "DELETE FROM customer WHERE customerid = ?";
+
+            // Create a prepared statement
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ps.setInt(1, id);
+
+            // Execute the delete
+            ps.executeUpdate();
+
+            return true; // The customer was successfully deleted
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false; // The customer delete failed
     }
 }
 

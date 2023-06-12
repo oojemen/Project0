@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8548530c-88ab-45ed-b0af-c7e7b02a5df6" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/Project0/Project0/Project0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/CustomerController.java" afterDir="false" />
@@ -19,7 +18,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAOInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/User.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" afterDir="false" />
@@ -41,6 +39,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QsqvUE5d66ELZbUdmyFVOHOVX9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -72,7 +73,7 @@
     </configuration>
     <configuration name="MyLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="URL" value="jdbc:postgresql://localhost:5432/postgres?currentSchema=Project0" />
+        <env name="URL" value="jdbc:postgresql://localhost:5432/postgres?currentSchema=project0" />
         <env name="USERNAME" value="postgres" />
         <env name="PASSWORD" value="password" />
       </envs>

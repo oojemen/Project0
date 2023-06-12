@@ -1,5 +1,19 @@
 package com.revature.utils;
 
+/**
+ * @author Osey Ojemen
+ * Date: 6/4/2023
+ *  PROJECT0
+ *
+ *  Customer Management System
+ *
+ *  Purpose: This Application will accept HTTP requests and store them in a connected database.
+ *  It utilizes a javalin framework to handle HTTP "CRUD" requests and responses.
+ *
+ *
+ *
+ */
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.revature.controllers.CustomerController;
@@ -15,11 +29,6 @@ import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class JavalinAppConfig {
 
-
-    // Adding some space in here, so we can format our GSON object mapper for Javalin to use.
-    // I'm copying this directly from the javalin docs at https://javalin.io/documentation#configuring-the-json-mapper
-    // Make sure to import everything
-
     Gson gson = new GsonBuilder().create();
     JsonMapper gsonMapper = new JsonMapper() {
         @Override
@@ -33,52 +42,41 @@ public class JavalinAppConfig {
         }
     };
 
-    // Let's add in instances of our controllers so we can use the methods
-    private final CustomerController customerController = new CustomerController();
-    private final EmployeeController employeeController = new EmployeeController();
-
-
     private static final Logger logger = LoggerFactory.getLogger(JavalinAppConfig.class);
 
-
-    // We'll create a private usage for our Javalin app, so we can only configure it here
-    // Now that we have GSON, let's update the coonfig (again pulled directly from Javalin Docs)
     private Javalin app = Javalin.create(config -> config.jsonMapper(gsonMapper))
 
             //Add logger for debugging
             .before(ctx -> {
-                // This logic here will run before ALL requests to the server
-                // We want to use to log our request sent
+
                 logger.info(ctx.method() + " Request was sent to path: " + ctx.fullUrl());
             })
-            // This is where we're going to register our routes for our API
-            // Shouldn't be too bad, just mind the lambdas and try to get an understanding of how this comes together
-            // Notice these all come from Javalin's APIBuilder
+
             .routes(() -> {
                 path("customer", () -> {
 
                     // Method referencing
                     get(CustomerController::handleGetAll);
                     post(CustomerController::handleCreate);
-                    put(CustomerController::handleUpdate);
-                    delete(CustomerController::handleDelete);
                     path("{id}", () ->{
                         get(CustomerController::handleGetOne);
+                    put(CustomerController::handleUpdate);
+                    delete(CustomerController::handleDelete);
                     });
                 });
                 path("employee", () -> {
                     // Method referencing
                     get(EmployeeController::handleGetAll);
                     post(EmployeeController::handleCreate);
-                    put(EmployeeController::handleUpdate);
-                    delete(EmployeeController::handleDelete);
                     path("{id}", () ->{
                         get(EmployeeController::handleGetOne);
+                    put(EmployeeController::handleUpdate);
+                    delete(EmployeeController::handleDelete);
                     });
                 });
             });
 
-    // We'll have a single public method called start to start our Javalin app, this will be called in the driver class
+    //  start method to start our Javalin app
     public void start(int port){
         app.start(port);
     }

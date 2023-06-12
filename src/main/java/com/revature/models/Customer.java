@@ -16,65 +16,66 @@ package com.revature.models;
 
 public class Customer {
 
-    private int customerId;
-    private String firstName;
+    private int customerid;
+    private String firstname;
 
-    private String lastName;
+    private String lastname;
 
-    private int totalSales;
+    private int totalsales;
 
     private Employee employee;
 
-    private int employeeId_fk;
+    private int employeeid_fk;
 
     //constructor which sets the values of variables
-    public  Customer(int customerId, String firstName,  String lastName,  int totalSales, Employee employee) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.customerId = customerId;
-        this.totalSales = totalSales;
+    public  Customer(int customerid, String firstname, String lastname, int totalsales, Employee employee) {
+        this.customerid = customerid;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.totalsales = totalsales;
+        this.employee =employee;
 
 
     }
-    public  Customer(String firstName,  String lastName,  Employee employee) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public  Customer(String firstname, String lastname, Employee employee) {
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.employee=employee;
     }
-    public  Customer(String firstName,  String lastName,  int employeeId_fk) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.employeeId_fk = employeeId_fk;
+    public  Customer(int customerid, int totalsales, int employeeid_fk) {
+        this.customerid = customerid;
+        this.totalsales = totalsales;
+        this.employeeid_fk = employeeid_fk;
 
     }
     //getters
-    public  int getCustomerId() {
-        return customerId;
+    public  int getCustomerid() {
+        return customerid;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public int getTotalSales() {
-        return totalSales;
+    public int getTotalsales() {
+        return totalsales;
     }
 
     public void setTotalSales() {
-        this.totalSales= totalSales;
+        this.totalsales = totalsales;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setCustomerid(int customerid) {
+        this.customerid = customerid;
     }
 
     public Employee getEmployee() {
@@ -85,21 +86,21 @@ public class Customer {
         this.employee = employee;
     }
 
-    public int getEmployeeId_fk() {
-        return employeeId_fk;
+    public int getEmployeeid_fk() {
+        return employeeid_fk;
     }
 
-    public void setEmployeeId_fk(int employeeId_fk) {
-        this.employeeId_fk = employeeId_fk;
+    public void setEmployeeid_fk(int employeeid_fk) {
+        this.employeeid_fk = employeeid_fk;
     }
 
     //displays formatted string of an customer's data
     @Override
     public String toString(){
 
-        return "Customer \n( customer_id="  +customerId  +  ", first_name='" + firstName
-                +", last_name=" + lastName +  ", Total Sales= $" + totalSales +  ", employee=" + employee
-                + ", employee_id_fk=" + employeeId_fk + ")";
+        return "Customer \n( customer_id="  + customerid +  ", first_name='" + firstname
+                +", last_name=" + lastname +  ", Total Sales= $" + totalsales +  ", employee=" + employee
+                + ", employee_id_fk=" + employeeid_fk + ")";
 
     }
 

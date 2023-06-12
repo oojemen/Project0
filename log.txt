@@ -24,3 +24,1757 @@
 01:30:07.974 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
 01:52:30.362 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employees
 01:52:37.201 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:43:49.041 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+07:43:49.143 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+07:43:49.219 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+07:43:49.230 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@1d9bec4d{/,null,AVAILABLE}
+07:43:49.242 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7b8233cd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+07:43:49.246 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@58359ebd{STARTING}[11.0.15,sto=0] @1277ms
+07:43:49.247 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+07:43:49.254 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+07:43:49.272 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+07:43:49.276 [main] INFO  io.javalin.Javalin -- Javalin started in 235ms \o/
+07:44:10.796 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+07:45:41.003 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:46:02.677 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+07:46:02.739 [JettyServerThreadPool-27] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: null
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:45)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+07:46:49.180 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:47:18.976 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:47:59.157 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+07:49:02.867 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+07:49:07.361 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+07:49:10.427 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+07:49:12.233 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+07:49:24.701 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- OPTIONS Request was sent to path: http://localhost:8080/employee
+07:50:00.036 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee/employeeId
+07:50:00.210 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/employeeId
+07:50:00.212 [JettyServerThreadPool-31] WARN  c.r.controllers.EmployeeController -- Unable to parse id = employeeId
+07:50:25.844 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employeeId
+07:50:26.082 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employeeId
+07:50:42.931 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employees
+07:50:43.109 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employees
+07:50:57.578 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:51:54.510 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:52:21.910 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+07:53:57.657 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+07:53:57.753 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+07:53:57.823 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+07:53:57.832 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@224b4d61{/,null,AVAILABLE}
+07:53:57.848 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@3b7ff809{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+07:53:57.853 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@129b4fe2{STARTING}[11.0.15,sto=0] @1039ms
+07:53:57.854 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+07:53:57.871 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+07:53:57.885 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+07:53:57.888 [main] INFO  io.javalin.Javalin -- Javalin started in 231ms \o/
+18:02:11.553 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+18:02:11.666 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+18:02:11.753 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+18:02:11.767 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@6e521c1e{/,null,AVAILABLE}
+18:02:11.781 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@5c00384f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+18:02:11.784 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@758c83d8{STARTING}[11.0.15,sto=0] @1565ms
+18:02:11.785 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+18:02:11.797 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+18:02:11.811 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+18:02:11.813 [main] INFO  io.javalin.Javalin -- Javalin started in 265ms \o/
+18:03:08.827 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+18:24:12.571 [JettyServerThreadPool-33] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+18:24:12.784 [JettyServerThreadPool-33] WARN  c.r.controllers.CustomerController -- Creation failed
+19:00:59.379 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:00:59.510 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:00:59.588 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:00:59.600 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+19:00:59.613 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:00:59.618 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1311ms
+19:00:59.618 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:00:59.628 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:00:59.644 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:00:59.646 [main] INFO  io.javalin.Javalin -- Javalin started in 270ms \o/
+19:01:57.849 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:01:57.915 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: null
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:45)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:03:16.678 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+19:08:54.615 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:08:54.725 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:08:54.817 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:08:54.833 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@6b5966e1{/,null,AVAILABLE}
+19:08:54.852 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@1a7288a3{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:08:54.858 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@42f48531{STARTING}[11.0.15,sto=0] @1255ms
+19:08:54.858 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:08:54.872 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:08:54.888 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:08:54.892 [main] INFO  io.javalin.Javalin -- Javalin started in 275ms \o/
+19:09:21.766 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:09:21.830 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: null
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:45)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:13:20.248 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:13:20.354 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:13:20.438 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:13:20.452 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@6f80fafe{/,null,AVAILABLE}
+19:13:20.469 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@665df3c6{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:13:20.473 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@1f2f9244{STARTING}[11.0.15,sto=0] @1117ms
+19:13:20.473 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:13:20.485 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:13:20.498 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:13:20.501 [main] INFO  io.javalin.Javalin -- Javalin started in 253ms \o/
+19:13:49.342 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:13:49.396 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: null
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:45)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:18:46.438 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:18:46.530 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:18:46.629 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:18:46.643 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@6f80fafe{/,null,AVAILABLE}
+19:18:46.662 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@665df3c6{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:18:46.668 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@1f2f9244{STARTING}[11.0.15,sto=0] @1090ms
+19:18:46.668 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:18:46.683 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:18:46.698 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:18:46.700 [main] INFO  io.javalin.Javalin -- Javalin started in 263ms \o/
+19:19:04.388 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:19:04.450 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:48)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:23:26.223 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:23:26.311 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:23:26.398 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:23:26.414 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@6b5966e1{/,null,AVAILABLE}
+19:23:26.431 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@1a7288a3{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:23:26.436 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@42f48531{STARTING}[11.0.15,sto=0] @1095ms
+19:23:26.436 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:23:26.448 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:23:26.461 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:23:26.464 [main] INFO  io.javalin.Javalin -- Javalin started in 242ms \o/
+19:23:35.919 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:23:35.986 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:48)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:23:51.879 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+19:26:38.932 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:26:39.034 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:26:39.122 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:26:39.133 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+19:26:39.149 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:26:39.154 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1113ms
+19:26:39.155 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:26:39.166 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:26:39.180 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:26:39.183 [main] INFO  io.javalin.Javalin -- Javalin started in 252ms \o/
+19:27:08.491 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:27:08.547 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:48)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:29:30.220 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:29:30.337 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:29:30.429 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:29:30.441 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+19:29:30.457 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:29:30.462 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1166ms
+19:29:30.462 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:29:30.474 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:29:30.484 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:29:30.487 [main] INFO  io.javalin.Javalin -- Javalin started in 268ms \o/
+19:29:41.370 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+19:29:41.426 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:48)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+19:42:06.944 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+19:42:07.034 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+19:42:07.120 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+19:42:07.130 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+19:42:07.144 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+19:42:07.147 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1061ms
+19:42:07.148 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+19:42:07.160 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+19:42:07.174 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+19:42:07.177 [main] INFO  io.javalin.Javalin -- Javalin started in 234ms \o/
+19:42:41.198 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+19:45:11.944 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+19:45:46.821 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+20:00:56.092 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+20:00:56.187 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+20:00:56.281 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+20:00:56.293 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+20:00:56.308 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+20:00:56.312 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1185ms
+20:00:56.312 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+20:00:56.322 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+20:00:56.336 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+20:00:56.339 [main] INFO  io.javalin.Javalin -- Javalin started in 248ms \o/
+20:01:15.825 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:01:47.326 [JettyServerThreadPool-18] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+20:02:03.151 [JettyServerThreadPool-21] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:02:08.337 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:05:13.376 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+20:05:13.468 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+20:05:13.547 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+20:05:13.556 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+20:05:13.570 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+20:05:13.576 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1043ms
+20:05:13.577 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+20:05:13.592 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+20:05:13.606 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+20:05:13.610 [main] INFO  io.javalin.Javalin -- Javalin started in 234ms \o/
+20:05:23.999 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:05:24.053 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+20:15:28.439 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+20:15:28.534 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+20:15:28.617 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+20:15:28.629 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+20:15:28.647 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+20:15:28.651 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1039ms
+20:15:28.651 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+20:15:28.664 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+20:15:28.677 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+20:15:28.680 [main] INFO  io.javalin.Javalin -- Javalin started in 242ms \o/
+20:15:44.220 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:15:44.281 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+20:36:42.726 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:36:42.797 [JettyServerThreadPool-17] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+20:39:42.142 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+20:39:42.274 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+20:39:42.371 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+20:39:42.385 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+20:39:42.402 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+20:39:42.407 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1280ms
+20:39:42.407 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+20:39:42.422 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+20:39:42.438 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+20:39:42.441 [main] INFO  io.javalin.Javalin -- Javalin started in 303ms \o/
+20:46:18.956 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+20:46:19.058 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+20:46:19.146 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+20:46:19.159 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+20:46:19.176 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+20:46:19.182 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1126ms
+20:46:19.182 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+20:46:19.196 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+20:46:19.209 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+20:46:19.212 [main] INFO  io.javalin.Javalin -- Javalin started in 256ms \o/
+20:46:32.679 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:46:32.739 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+20:50:05.945 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+20:50:06.041 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+20:50:06.136 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+20:50:06.147 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+20:50:06.162 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+20:50:06.166 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1090ms
+20:50:06.166 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+20:50:06.177 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+20:50:06.190 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+20:50:06.193 [main] INFO  io.javalin.Javalin -- Javalin started in 249ms \o/
+20:50:25.633 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+20:50:25.691 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+20:59:09.189 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/1
+20:59:09.246 [JettyServerThreadPool-22] WARN  c.r.controllers.EmployeeController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+21:00:07.053 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/001
+21:00:07.089 [JettyServerThreadPool-17] WARN  c.r.controllers.EmployeeController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+21:01:51.412 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:01:51.510 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:01:51.606 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+21:01:51.620 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@7c22d4f{/,null,AVAILABLE}
+21:01:51.640 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@5a7005d{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+21:01:51.646 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@328cf0e1{STARTING}[11.0.15,sto=0] @1170ms
+21:01:51.646 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+21:01:51.657 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+21:01:51.672 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+21:01:51.676 [main] INFO  io.javalin.Javalin -- Javalin started in 264ms \o/
+21:02:05.833 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/1
+21:02:05.900 [JettyServerThreadPool-30] WARN  c.r.controllers.EmployeeController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+21:05:13.594 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:05:13.693 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:05:13.781 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+21:05:13.793 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@7c22d4f{/,null,AVAILABLE}
+21:05:13.810 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@5a7005d{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+21:05:13.814 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@328cf0e1{STARTING}[11.0.15,sto=0] @1147ms
+21:05:13.814 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+21:05:13.825 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+21:05:13.839 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+21:05:13.842 [main] INFO  io.javalin.Javalin -- Javalin started in 248ms \o/
+21:06:19.808 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/1
+21:06:19.868 [JettyServerThreadPool-29] WARN  c.r.controllers.EmployeeController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+21:11:12.164 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:11:12.257 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:11:12.343 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+21:11:12.357 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@51e4ccb3{/,null,AVAILABLE}
+21:11:12.374 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@488eb7f2{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+21:11:12.380 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@75459c75{STARTING}[11.0.15,sto=0] @1165ms
+21:11:12.380 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+21:11:12.394 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+21:11:12.407 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+21:11:12.411 [main] INFO  io.javalin.Javalin -- Javalin started in 246ms \o/
+21:11:28.986 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+21:11:29.154 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+21:12:03.207 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+21:12:03.247 [JettyServerThreadPool-17] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.CustomerController.handleGetAll(CustomerController.java:48)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+21:12:23.803 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+21:12:23.855 [JettyServerThreadPool-30] WARN  c.r.controllers.CustomerController -- Creation failed
+21:50:13.563 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:50:13.664 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:50:13.745 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+21:50:13.757 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+21:50:13.776 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+21:50:13.782 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1193ms
+21:50:13.782 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+21:50:13.797 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+21:50:13.814 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+21:50:13.817 [main] INFO  io.javalin.Javalin -- Javalin started in 255ms \o/
+21:50:47.247 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+21:50:47.311 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+21:52:54.972 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:52:55.068 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:52:55.090 [main] ERROR io.javalin.Javalin -- Failed to start Javalin
+21:52:55.090 [main] INFO  io.javalin.Javalin -- Stopping Javalin ...
+21:52:55.090 [main] INFO  org.eclipse.jetty.server.Server -- Stopped Server@2e6a5539{STOPPING}[11.0.15,sto=0]
+21:52:55.090 [main] INFO  io.javalin.Javalin -- Javalin has stopped
+21:53:11.350 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:53:11.455 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:53:11.482 [main] ERROR io.javalin.Javalin -- Failed to start Javalin
+21:53:11.482 [main] INFO  io.javalin.Javalin -- Stopping Javalin ...
+21:53:11.483 [main] INFO  org.eclipse.jetty.server.Server -- Stopped Server@2e6a5539{STOPPING}[11.0.15,sto=0]
+21:53:11.483 [main] INFO  io.javalin.Javalin -- Javalin has stopped
+21:53:57.313 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:53:57.423 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:53:57.445 [main] ERROR io.javalin.Javalin -- Failed to start Javalin
+21:53:57.445 [main] INFO  io.javalin.Javalin -- Stopping Javalin ...
+21:53:57.446 [main] INFO  org.eclipse.jetty.server.Server -- Stopped Server@2e6a5539{STOPPING}[11.0.15,sto=0]
+21:53:57.446 [main] INFO  io.javalin.Javalin -- Javalin has stopped
+21:54:11.116 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+21:54:11.210 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+21:54:11.296 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+21:54:11.309 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+21:54:11.324 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+21:54:11.329 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1237ms
+21:54:11.329 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+21:54:11.341 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+21:54:11.357 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+21:54:11.360 [main] INFO  io.javalin.Javalin -- Javalin started in 246ms \o/
+22:34:33.233 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+22:34:33.387 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+22:34:33.491 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+22:34:33.504 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@841e575{/,null,AVAILABLE}
+22:34:33.519 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@320de594{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+22:34:33.523 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@2a3c96e3{STARTING}[11.0.15,sto=0] @1330ms
+22:34:33.523 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+22:34:33.532 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+22:34:33.546 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+22:34:33.549 [main] INFO  io.javalin.Javalin -- Javalin started in 318ms \o/
+22:35:02.324 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+22:35:02.417 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controllers.EmployeeController.handleGetAll(EmployeeController.java:50)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+22:37:04.980 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+22:37:05.082 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+22:37:05.171 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+22:37:05.186 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+22:37:05.202 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+22:37:05.207 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1080ms
+22:37:05.208 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+22:37:05.218 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+22:37:05.232 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+22:37:05.235 [main] INFO  io.javalin.Javalin -- Javalin started in 257ms \o/
+22:37:14.743 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+22:37:27.909 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/1
+22:37:27.953 [JettyServerThreadPool-17] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=0, first_name='osey, last_name=Ojemen, Location= maryland)
+23:14:52.364 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+23:32:47.941 [JettyServerThreadPool-36] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/employee
+23:37:07.100 [JettyServerThreadPool-38] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+23:37:07.239 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/favicon.ico
+00:50:34.656 [JettyServerThreadPool-44] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+00:51:41.210 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+00:56:09.101 [JettyServerThreadPool-46] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+00:57:14.559 [JettyServerThreadPool-42] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+00:57:14.796 [JettyServerThreadPool-42] WARN  c.r.controllers.EmployeeController -- Creation failed
+01:18:19.139 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+01:18:19.257 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+01:18:19.337 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+01:18:19.350 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@28a0fd6c{/,null,AVAILABLE}
+01:18:19.365 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@3e7634b9{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+01:18:19.368 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@67ab1c47{STARTING}[11.0.15,sto=0] @1443ms
+01:18:19.368 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+01:18:19.378 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+01:18:19.395 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+01:18:19.398 [main] INFO  io.javalin.Javalin -- Javalin started in 260ms \o/
+01:20:49.769 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+01:20:49.862 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+01:20:49.961 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+01:20:49.971 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+01:20:49.988 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+01:20:49.992 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1119ms
+01:20:49.992 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+01:20:50.003 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+01:20:50.016 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+01:20:50.019 [main] INFO  io.javalin.Javalin -- Javalin started in 251ms \o/
+01:20:54.778 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:20:54.861 [JettyServerThreadPool-29] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=0, first_name='John, last_name=Smith, Location= texas)
+01:24:40.600 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:24:40.644 [JettyServerThreadPool-31] WARN  c.r.controllers.EmployeeController -- Creation failed
+01:36:39.459 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:36:39.510 [JettyServerThreadPool-16] WARN  c.r.controllers.EmployeeController -- Creation failed
+01:37:05.568 [JettyServerThreadPool-21] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+01:37:05.603 [JettyServerThreadPool-21] WARN  c.r.controllers.EmployeeController -- Creation failed
+01:40:19.382 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+01:45:47.302 [JettyServerThreadPool-38] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+01:45:47.338 [JettyServerThreadPool-38] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=23, first_name='Tricia, last_name=Smalls, Total Sales= $7800, employee=Employee 
+( employee_id=1, first_name='osey, last_name=Ojemen, Location= maryland), employee_id_fk=1)
+01:46:03.746 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+02:01:14.017 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+02:01:14.110 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+02:01:14.192 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+02:01:14.205 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+02:01:14.222 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+02:01:14.228 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1304ms
+02:01:14.228 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+02:01:14.241 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+02:01:14.255 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+02:01:14.257 [main] INFO  io.javalin.Javalin -- Javalin started in 241ms \o/
+02:03:00.789 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/NaN
+02:03:00.798 [JettyServerThreadPool-30] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.IllegalArgumentException: 'customerid' is not a valid path-param for '/customer/{id}'.
+	at io.javalin.http.servlet.JavalinServletContextKt.pathParamOrThrow(JavalinServletContext.kt:148)
+	at io.javalin.http.servlet.JavalinServletContext.pathParam(JavalinServletContext.kt:105)
+	at com.revature.controllers.CustomerController.handleGetOne(CustomerController.java:74)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+02:03:10.419 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+02:03:36.437 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+02:03:36.534 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+02:03:36.624 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+02:03:36.635 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@7c22d4f{/,null,AVAILABLE}
+02:03:36.651 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@5a7005d{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+02:03:36.654 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@328cf0e1{STARTING}[11.0.15,sto=0] @1147ms
+02:03:36.654 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+02:03:36.666 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+02:03:36.680 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+02:03:36.684 [main] INFO  io.javalin.Javalin -- Javalin started in 246ms \o/
+02:04:44.870 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+02:04:44.951 [JettyServerThreadPool-30] WARN  c.r.controllers.EmployeeController -- Creation failed
+02:37:51.647 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+02:37:51.741 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+02:37:51.842 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+02:37:51.857 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+02:37:51.871 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+02:37:51.874 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1227ms
+02:37:51.874 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+02:37:51.887 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+02:37:51.900 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+02:37:51.902 [main] INFO  io.javalin.Javalin -- Javalin started in 257ms \o/
+02:38:19.019 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+02:38:19.210 [JettyServerThreadPool-29] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=0, first_name='Samuel, last_name=Song, Location= Virginia)
+02:39:05.909 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+02:39:05.951 [JettyServerThreadPool-22] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=0, first_name='Paul, last_name=Tom, Location= New York)
+02:39:25.839 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+02:44:56.951 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/employee
+02:45:50.391 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/employee
+02:49:14.377 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+02:49:14.472 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+02:49:14.555 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+02:49:14.566 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+02:49:14.582 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+02:49:14.587 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1183ms
+02:49:14.587 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+02:49:14.598 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+02:49:14.612 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+02:49:14.614 [main] INFO  io.javalin.Javalin -- Javalin started in 239ms \o/
+02:49:38.661 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/employee
+02:49:54.741 [JettyServerThreadPool-18] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/0
+02:49:54.821 [JettyServerThreadPool-18] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=0, first_name='John, last_name=Smith, Location= texas)
+02:52:57.519 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/employee
+02:54:19.580 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/0
+02:54:19.628 [JettyServerThreadPool-16] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=0, first_name='John, last_name=Smith, Location= texas)
+02:56:09.055 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/employee/0
+03:00:50.208 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/employee/2
+03:00:50.218 [JettyServerThreadPool-29] WARN  io.javalin.Javalin -- Uncaught exception
+java.lang.NullPointerException: null
+	at com.revature.services.EmployeeService.updateLocation(EmployeeService.java:24)
+	at com.revature.controllers.EmployeeController.handleUpdate(EmployeeController.java:73)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda$8$lambda$6$lambda$5(DefaultTasks.kt:38)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:88)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:53)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:41)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+03:01:19.254 [JettyServerThreadPool-21] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/employee/2
+03:16:00.947 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+03:16:01.065 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+03:16:01.158 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+03:16:01.171 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+03:16:01.185 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+03:16:01.189 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1256ms
+03:16:01.189 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+03:16:01.199 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+03:16:01.214 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+03:16:01.217 [main] INFO  io.javalin.Javalin -- Javalin started in 272ms \o/
+03:16:12.982 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/employee/2
+03:16:13.207 [JettyServerThreadPool-30] INFO  c.r.controllers.EmployeeController -- Employee update successful 
+03:17:56.573 [JettyServerThreadPool-21] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/4
+03:17:56.639 [JettyServerThreadPool-21] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=0, first_name='Paul, last_name=Tom, Location= New York)
+03:19:58.835 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+03:19:58.941 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+03:19:59.023 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+03:19:59.037 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+03:19:59.055 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+03:19:59.061 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1255ms
+03:19:59.062 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+03:19:59.081 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+03:19:59.098 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+03:19:59.102 [main] INFO  io.javalin.Javalin -- Javalin started in 267ms \o/
+03:20:12.875 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/2
+03:20:12.954 [JettyServerThreadPool-30] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=0, first_name='Shola, last_name=Ojez, Location= Virginia)
+03:22:50.143 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+03:22:50.269 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+03:22:50.346 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+03:22:50.358 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+03:22:50.373 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+03:22:50.377 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1204ms
+03:22:50.377 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+03:22:50.390 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+03:22:50.405 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+03:22:50.409 [main] INFO  io.javalin.Javalin -- Javalin started in 266ms \o/
+03:22:59.108 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/2
+03:22:59.191 [JettyServerThreadPool-30] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=2, first_name='Shola, last_name=Ojez, Location= Virginia)
+03:36:10.625 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+03:36:10.727 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+03:36:10.816 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+03:36:10.828 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+03:36:10.843 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+03:36:10.847 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1129ms
+03:36:10.847 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+03:36:10.857 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+03:36:10.870 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+03:36:10.873 [main] INFO  io.javalin.Javalin -- Javalin started in 251ms \o/
+03:39:46.754 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer/3
+03:40:41.578 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+03:40:41.656 [JettyServerThreadPool-22] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=0, first_name='Tiwa, last_name=Savage, Total Sales= $34000, employee=Employee 
+( employee_id=4, first_name='Paul, last_name=Tom, Location= New York), employee_id_fk=4)
+03:41:08.587 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+03:50:58.374 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+03:50:58.425 [JettyServerThreadPool-16] WARN  c.r.controllers.CustomerController -- Creation failed
+03:51:12.554 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+03:51:12.657 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+03:51:12.738 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+03:51:12.750 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@2484f433{/,null,AVAILABLE}
+03:51:12.766 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@7e22550a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+03:51:12.771 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@25e2a451{STARTING}[11.0.15,sto=0] @1182ms
+03:51:12.771 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+03:51:12.784 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+03:51:12.800 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+03:51:12.803 [main] INFO  io.javalin.Javalin -- Javalin started in 251ms \o/
+03:51:20.256 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+03:51:20.327 [JettyServerThreadPool-17] WARN  c.r.controllers.CustomerController -- Creation failed
+03:51:45.720 [JettyServerThreadPool-18] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+03:51:45.765 [JettyServerThreadPool-18] WARN  c.r.controllers.CustomerController -- Creation failed
+03:52:10.805 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+03:52:10.980 [JettyServerThreadPool-29] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=4, first_name='Pat, last_name=Asake, Total Sales= $79000, employee=Employee 
+( employee_id=1, first_name='osey, last_name=Ojemen, Location= maryland), employee_id_fk=1)
+03:53:23.941 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0
+03:53:35.076 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+03:54:22.449 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/0
+03:54:22.454 [JettyServerThreadPool-16] WARN  c.r.controllers.CustomerController -- No resource was found at id = 0 from ip: [0:0:0:0:0:0:0:1]
+03:55:19.417 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/0
+03:55:19.417 [JettyServerThreadPool-29] WARN  c.r.controllers.CustomerController -- No resource was found at id = 0 from ip: [0:0:0:0:0:0:0:1]
+03:56:05.319 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/0
+03:56:05.320 [JettyServerThreadPool-17] WARN  c.r.controllers.CustomerController -- No resource was found at id = 0 from ip: [0:0:0:0:0:0:0:1]
+03:56:17.094 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0
+03:56:35.071 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+03:57:14.883 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0
+03:57:33.172 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/0
+03:57:33.173 [JettyServerThreadPool-22] WARN  c.r.controllers.CustomerController -- No resource was found at id = 0 from ip: [0:0:0:0:0:0:0:1]
+04:08:03.436 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+04:08:03.540 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+04:08:03.619 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+04:08:03.631 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@6e521c1e{/,null,AVAILABLE}
+04:08:03.649 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@5c00384f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+04:08:03.654 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@758c83d8{STARTING}[11.0.15,sto=0] @1191ms
+04:08:03.654 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+04:08:03.667 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+04:08:03.682 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+04:08:03.685 [main] INFO  io.javalin.Javalin -- Javalin started in 250ms \o/
+04:08:20.550 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0
+04:08:33.152 [JettyServerThreadPool-21] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/0
+04:08:33.158 [JettyServerThreadPool-21] WARN  c.r.controllers.CustomerController -- No resource was found at id = 0 from ip: [0:0:0:0:0:0:0:1]
+04:08:42.911 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+04:10:00.226 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:10:00.267 [JettyServerThreadPool-22] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:10:47.912 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:10:47.948 [JettyServerThreadPool-16] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:13:48.796 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+04:13:48.844 [JettyServerThreadPool-19] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=3, first_name='Tonia, last_name=Banks, Total Sales= $311000, employee=null, employee_id_fk=3)
+04:14:41.489 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0
+04:15:04.510 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/0
+04:15:04.510 [JettyServerThreadPool-27] WARN  c.r.controllers.CustomerController -- No resource was found at id = 0 from ip: [0:0:0:0:0:0:0:1]
+04:15:18.009 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+04:16:17.223 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/1
+04:16:48.550 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:16:48.582 [JettyServerThreadPool-19] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:17:24.223 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:17:24.258 [JettyServerThreadPool-31] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:17:46.084 [JettyServerThreadPool-18] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/1
+04:17:58.417 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:17:58.449 [JettyServerThreadPool-31] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:18:15.558 [JettyServerThreadPool-18] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:18:15.595 [JettyServerThreadPool-18] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:18:38.805 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+04:18:38.839 [JettyServerThreadPool-31] WARN  c.r.controllers.CustomerController -- No resource was found at id = 1 from ip: [0:0:0:0:0:0:0:1]
+04:18:55.933 [JettyServerThreadPool-18] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+04:50:59.674 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+04:50:59.783 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+04:50:59.860 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+04:50:59.874 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+04:50:59.891 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+04:50:59.896 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1217ms
+04:50:59.896 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+04:50:59.909 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+04:50:59.925 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+04:50:59.929 [main] INFO  io.javalin.Javalin -- Javalin started in 254ms \o/
+04:51:54.082 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0
+04:52:04.255 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+04:55:23.504 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+04:55:23.552 [JettyServerThreadPool-20] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=50, first_name='Sholita, last_name=Shojez, Total Sales= $100000, employee=null, employee_id_fk=3)
+04:57:19.858 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+04:58:02.705 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/50
+04:58:02.758 [JettyServerThreadPool-27] WARN  c.r.controllers.CustomerController -- No resource was found at id = 50 from ip: [0:0:0:0:0:0:0:1]
+05:04:20.055 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/4
+05:04:20.091 [JettyServerThreadPool-29] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=4, first_name='Paul, last_name=Tom, Location= New York)
+05:12:59.297 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+05:12:59.405 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+05:12:59.478 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+05:12:59.490 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+05:12:59.507 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+05:12:59.512 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1201ms
+05:12:59.512 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+05:12:59.527 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+05:12:59.545 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+05:12:59.549 [main] INFO  io.javalin.Javalin -- Javalin started in 252ms \o/
+05:13:14.662 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/50
+05:13:14.805 [JettyServerThreadPool-30] INFO  c.r.controllers.CustomerController -- The following Customer was obtained from db: Customer 
+( customer_id=50, first_name='Sholita, last_name=Shojez, Total Sales= $100000, employee=Employee 
+( employee_id=3, first_name='Samuel, last_name=Song, Location= Virginia), employee_id_fk=0)
+05:13:42.267 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/1
+05:13:42.343 [JettyServerThreadPool-20] INFO  c.r.controllers.CustomerController -- The following Customer was obtained from db: Customer 
+( customer_id=1, first_name='Grace, last_name=Hernadez, Total Sales= $2000, employee=Employee 
+( employee_id=1, first_name='osey, last_name=Ojemen, Location= maryland), employee_id_fk=0)
+05:13:55.975 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/23
+05:13:56.040 [JettyServerThreadPool-27] INFO  c.r.controllers.CustomerController -- The following Customer was obtained from db: Customer 
+( customer_id=23, first_name='Tricia, last_name=Smalls, Total Sales= $7800, employee=Employee 
+( employee_id=1, first_name='osey, last_name=Ojemen, Location= maryland), employee_id_fk=0)
+05:14:53.427 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/customer/3
+05:14:53.482 [JettyServerThreadPool-19] INFO  c.r.controllers.CustomerController -- Customer is updated.
+05:15:55.440 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/customer/3
+05:15:55.477 [JettyServerThreadPool-16] INFO  c.r.controllers.CustomerController -- Customer is updated.
+05:18:05.640 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/customer/3
+05:18:05.679 [JettyServerThreadPool-27] INFO  c.r.controllers.CustomerController -- Customer is updated.
+05:18:13.425 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer/3
+05:18:13.495 [JettyServerThreadPool-16] INFO  c.r.controllers.CustomerController -- The following Customer was obtained from db: Customer 
+( customer_id=3, first_name='Tonia, last_name=Robinson, Total Sales= $20000, employee=Employee 
+( employee_id=3, first_name='Samuel, last_name=Song, Location= Virginia), employee_id_fk=0)
+05:19:14.606 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/customer/3
+05:19:14.646 [JettyServerThreadPool-31] INFO  c.r.controllers.CustomerController -- Customer is updated.
+05:21:55.946 [JettyServerThreadPool-34] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+05:21:55.986 [JettyServerThreadPool-34] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=6, first_name='Tiwa, last_name=Savage, Total Sales= $170000, employee=null, employee_id_fk=1)
+05:22:57.905 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/1
+05:24:36.554 [JettyServerThreadPool-31] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+05:24:36.594 [JettyServerThreadPool-31] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=1, first_name='Grace, last_name=Hernandez, Total Sales= $670000, employee=null, employee_id_fk=2)
+05:24:56.790 [JettyServerThreadPool-34] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/customer
+05:26:17.467 [JettyServerThreadPool-32] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:26:17.502 [JettyServerThreadPool-32] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=0, first_name='Favor, last_name=Ann, Location= District of Columbia)
+05:43:53.536 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+05:43:53.638 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+05:43:53.720 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+05:43:53.734 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+05:43:53.751 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+05:43:53.756 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1183ms
+05:43:53.757 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+05:43:53.769 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+05:43:53.784 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+05:43:53.787 [main] INFO  io.javalin.Javalin -- Javalin started in 252ms \o/
+05:45:37.299 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:45:37.363 [JettyServerThreadPool-30] WARN  c.r.controllers.EmployeeController -- Creation failed
+05:46:37.576 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:46:37.610 [JettyServerThreadPool-22] WARN  c.r.controllers.EmployeeController -- Creation failed
+05:47:27.121 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+05:47:27.212 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+05:47:27.306 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+05:47:27.317 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+05:47:27.334 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+05:47:27.340 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1109ms
+05:47:27.340 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+05:47:27.357 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+05:47:27.368 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+05:47:27.371 [main] INFO  io.javalin.Javalin -- Javalin started in 248ms \o/
+05:47:33.787 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:47:33.858 [JettyServerThreadPool-30] WARN  c.r.controllers.EmployeeController -- Creation failed
+05:47:46.822 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+05:51:04.513 [JettyServerThreadPool-22] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee
+05:51:13.160 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:51:13.193 [JettyServerThreadPool-16] WARN  c.r.controllers.EmployeeController -- Creation failed
+05:51:30.133 [JettyServerThreadPool-29] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:51:30.167 [JettyServerThreadPool-29] WARN  c.r.controllers.EmployeeController -- Creation failed
+05:52:46.630 [main] INFO  io.javalin.Javalin -- Starting Javalin ...
+05:52:46.728 [main] INFO  org.eclipse.jetty.server.Server -- jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 11.0.18+9-LTS-195
+05:52:46.817 [main] INFO  o.e.j.s.s.DefaultSessionIdManager -- Session workerName=node0
+05:52:46.832 [main] INFO  o.e.j.server.handler.ContextHandler -- Started i.j.j.@5f4d427e{/,null,AVAILABLE}
+05:52:46.846 [main] INFO  o.e.jetty.server.AbstractConnector -- Started ServerConnector@36f48b4{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+05:52:46.850 [main] INFO  org.eclipse.jetty.server.Server -- Started Server@505a9d7c{STARTING}[11.0.15,sto=0] @1295ms
+05:52:46.850 [main] INFO  io.javalin.Javalin -- 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+05:52:46.860 [main] INFO  io.javalin.Javalin -- Listening on http://localhost:8080/
+05:52:46.873 [main] INFO  io.javalin.Javalin -- You are running Javalin 5.5.0 (released May 1, 2023).
+05:52:46.876 [main] INFO  io.javalin.Javalin -- Javalin started in 247ms \o/
+05:53:01.007 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:53:01.083 [JettyServerThreadPool-30] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=7, first_name='Sheeba, last_name=Bee, Location= Miami)
+05:54:20.075 [JettyServerThreadPool-16] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:54:20.120 [JettyServerThreadPool-16] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=0, first_name='Stanley, last_name=U.S.A, Location= Vegas)
+05:55:13.099 [JettyServerThreadPool-17] INFO  com.revature.utils.JavalinAppConfig -- GET Request was sent to path: http://localhost:8080/employee/0
+05:55:13.145 [JettyServerThreadPool-17] INFO  c.r.controllers.EmployeeController -- The following employee was obtained from db: Employee 
+( employee_id=0, first_name='Stanley, last_name=U.S.A, Location= Vegas)
+05:55:34.164 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/employee/0
+05:56:21.597 [JettyServerThreadPool-19] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee/10
+05:56:50.196 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/employee
+05:56:50.236 [JettyServerThreadPool-23] INFO  c.r.controllers.EmployeeController -- The following employee was created: Employee 
+( employee_id=10, first_name='Stanley, last_name=U.S.A, Location= Vegas)
+05:58:14.060 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/employee/10
+05:58:14.106 [JettyServerThreadPool-30] INFO  c.r.controllers.EmployeeController -- Employee update successful 
+05:59:49.084 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/customer/3
+05:59:49.129 [JettyServerThreadPool-27] INFO  c.r.controllers.CustomerController -- Customer is updated.
+06:00:18.818 [JettyServerThreadPool-20] INFO  com.revature.utils.JavalinAppConfig -- PUT Request was sent to path: http://localhost:8080/customer/3
+06:00:18.855 [JettyServerThreadPool-20] INFO  c.r.controllers.CustomerController -- Customer is updated.
+06:01:07.755 [JettyServerThreadPool-23] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/3
+06:02:09.450 [JettyServerThreadPool-30] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+06:02:09.613 [JettyServerThreadPool-30] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=0, first_name='Thomas, last_name=Robinson, Total Sales= $25000, employee=null, employee_id_fk=3)
+06:02:28.596 [JettyServerThreadPool-32] INFO  com.revature.utils.JavalinAppConfig -- POST Request was sent to path: http://localhost:8080/customer
+06:02:28.632 [JettyServerThreadPool-32] INFO  c.r.controllers.CustomerController -- The following customer was created: Customer 
+( customer_id=5, first_name='Thomas, last_name=Robinson, Total Sales= $25000, employee=null, employee_id_fk=3)
+06:03:04.138 [JettyServerThreadPool-27] INFO  com.revature.utils.JavalinAppConfig -- DELETE Request was sent to path: http://localhost:8080/customer/0

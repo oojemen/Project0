@@ -1,81 +1,134 @@
 package com.revature.controllers;
 
+/**
+ * @author Osey Ojemen
+ * Date: 6/4/2023
+ *  PROJECT0
+ *
+ *  Customer Management System
+ *
+ *  Purpose: This Application will accept HTTP requests and store them in a connected database.
+ *  It utilizes a javalin framework to handle HTTP "CRUD" requests and responses.
+ *
+ *
+ *
+ */
+
 import com.revature.models.Customer;
 import com.revature.services.CustomerService;
 
-//import com.revature.models.Employee;
 import io.javalin.http.Context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 
-
-// The controller layer has the sole responsibility of taking in HttpRequests and has the responsibilty of sending the
+// This controller layer has the sole responsibility of taking in HttpRequests and has the responsibilty of sending the
 //    corresponding response.
 public class CustomerController {
 
     private static final CustomerService customerService = new CustomerService();
 
-    // We want to add in a logger so let's follow the same process we did before
+    // logger to keep track of requests and responses
     private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
+
+    //get all customer request method
     public static void handleGetAll(Context ctx){
-        // Inside here we need to make a call to our Employee Service to get us all the employees listed
-        ArrayList<Customer> customer= customerService.getAllCustomer();
 
-        String result = "";
-
-        for (Customer cust: customer){
-            result += cust.toString() + "\n";
-        }
+        // Inside here we need to make a call to our Customer Service to get us all the customers listed
 
         ctx.status(200);
-        ctx.result(result);
-
-        //Now we can leverage our JSON, GSON, to convert our Java Object to a JSON
-
-        ctx.status(200);
-        ctx.json(customer);
+        ctx.json(customerService.getAllCustomer());
 
     }
 
     public static void handleCreate(Context ctx){
-        ctx.result("Hello World from the employee controller");
 
-        // To create a new employee from our Context body we need to essentially take it in as a JSON and convert it
-        // To an object of the appropriate class
+        Customer customer = ctx.bodyAsClass(Customer.class);
 
-        Customer cust = ctx.bodyAsClass(Customer.class);
-
-        Customer returnedCustomer = customerService.createNewCustomer(cust);
-
-        // If the employee object we receive from the service is null, something has gone wrong
-        // If it is not null, yay we did it
+        Customer returnedCustomer = customerService.createNewCustomer(customer);
 
         if (returnedCustomer != null) {
-            // This means the employee was created
+
             ctx.status(201);
             ctx.json(returnedCustomer);
-            logger.info("The following employee was created: " + returnedCustomer.toString());
+            logger.info("The following customer was created: " + returnedCustomer.toString());
         } else {
-            // What happens if it comes back null?
+            // 400 HTTP response
             ctx.status(400);
             logger.warn("Creation failed");
         }
     }
 
-    // Create some method stubs here just for now
+    // Create
     public static void handleGetOne(Context ctx) {
-        ctx.status(405);
+
+        int id;
+        try{
+            id = Integer.parseInt(ctx.pathParam("id"));
+        }catch (NumberFormatException e){
+            // This block running means they didn't have a valid integer in their path
+            ctx.status(400);
+
+            // Let's add a logger to show the invalid id
+            logger.warn("Unable to parse id = " + ctx.pathParam("customerid"));
+
+            // Adding a return statement here because there's no point continuing with a bad int
+            return;
+        }
+
+        // Let's call the role service and attempt to pull the value
+        Customer customer = customerService.getCustomerById(id);
+
+        // We need to check if the role is null or not
+        if (customer != null){
+            // This is good, it found the roll
+            ctx.status(200);
+            ctx.json(customer);
+            // This is unnecessary but we'll add a log here
+            logger.info("The following Customer was obtained from db: " +customer.toString());
+        } else{
+            ctx.status(404);
+            logger.warn("No resource was found at id = " + id + " from ip: " + ctx.ip());
+        }
     }
 
     public static void handleUpdate(Context ctx) {
-        ctx.status(405);
+
+        // Retrieve the updated customer details from the request body
+        Customer submittedCustomer = ctx.bodyAsClass(Customer.class);
+        submittedCustomer.setCustomerid(Integer.parseInt(ctx.pathParam("id")));
+
+        // Call the CustomerService to update the customer
+        boolean isUpdated = customerService.updateCustomer( submittedCustomer);
+
+        if (isUpdated) {
+            // Customer updated successfully, return a 200 OK response
+            ctx.status(200);
+            ctx.result("Customer updated successfully");
+            logger.info( "Customer is updated.");
+        } else {
+            // Customer not found or update failed, return a 404 Not Found or 400 Bad Request response
+            ctx.status(404);
+            ctx.result("Customer not found ");
+            logger.warn("Customer update failed");
+        }
     }
 
     public static void handleDelete(Context ctx) {
-        ctx.status(405);
+        // Extract the customer ID from the request parameters or path
+        int customerid = Integer.parseInt(ctx.pathParam("id"));
+
+         // Call the CustomerService to delete the customer
+       if(customerService.deleteCustomer(customerid)){
+           ctx.result("customer deleted");
+       }
+
+       else {
+            // Customer not found or deletion failed, return a 404 Not Found response
+            ctx.status(404);
+            ctx.result("Customer not found: deletion failed");
+        }
     }
 
 }

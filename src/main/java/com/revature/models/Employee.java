@@ -19,66 +19,65 @@ package com.revature.models;
 
 public class Employee  {
 
-    private int employeeId;
-    private String location;
-    private String first_Name;
+    private int employee_id;
+    private String employee_location;
+    private String first_name;
 
-    private String last_Name;
+    private String last_name;
 
     //constructor which sets the values of variables
-    public  Employee( int employeeId, String first_Name, String last_Name,  String employee_location) {
-        this.first_Name = first_Name;
-        this.last_Name = last_Name;
-        this.employeeId = employeeId;
-        this.location = location;
+    public  Employee(int employee_id, String first_name, String last_name, String employee_location) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.employee_id = employee_id;
+        this.employee_location = employee_location;
 
 
     }
-    public  Employee( String first_Name, String last_Name,  String location) {
-        this.first_Name = first_Name;
-        this.last_Name = last_Name;
-
-        this.location = location;
+    public  Employee(String first_name, String last_name, String employee_location) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.employee_location = employee_location;
 
     }
-    public int getEmployeeId() {
-        return employeeId;
+    public int getEmployee_id() {
+        return employee_id;
     }
 
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployee_id(int employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getLocation() {
-        return location;
+    public String getEmployee_location() {
+        return employee_location;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setEmployee_location(String employee_location) {
+        this.employee_location = employee_location;
     }
 
     public String getFirstName() {
-        return first_Name;
+        return first_name;
     }
 
-    public void setFirstName(String first_Name) {
-        this.first_Name = first_Name;
+    public void setFirstName(String first_name) {
+        this.first_name = first_name;
     }
 
     public String getLastName() {
-        return last_Name;
+        return last_name;
     }
 
     public void setLastName(String lastName) {
-        this.last_Name = last_Name;
+        this.last_name = last_name;
     }
 
     // continue here
     @Override
     public String toString(){
 
-        return "Employee \n( employee_id="  + employeeId  +  ", first_name='" + first_Name
-                +", last_name=" + last_Name +  ", Location= " + location + ")";
+        return "Employee \n( employee_id="  + employee_id +  ", first_name='" + first_name
+                +", last_name=" + last_name +  ", Location= " + employee_location + ")";
 
     }
 
