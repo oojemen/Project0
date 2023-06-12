@@ -3,12 +3,14 @@ package com.revature;
 /**
  * @author Osey Ojemen
  * Date: 6/4/2023
- *  PROJECT
+ *  PROJECT0
  *
- *  Purpose: This program will display menu to allow the user load Customer's Data,
- *           add new customer data, display customers information, retrieve customers data,
- *           retrieve customers with total sales based on their range and on selection the
- *           program ends.
+ *  Customer Management System
+ *
+ *  Purpose: This Application will accept HTTP requests and store them in a connected database.
+ *  It utilizes a javalin framework to handle HTTP "CRUD" requests and responses.
+ *
+ *
  *
  */
 

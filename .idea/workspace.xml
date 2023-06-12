@@ -6,22 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8548530c-88ab-45ed-b0af-c7e7b02a5df6" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/Project0/Project0/Project0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/MyLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/CustomerDAOInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAOInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/daos/EmployeeDAOInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/services/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/ConnectionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/utils/JavalinAppConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
